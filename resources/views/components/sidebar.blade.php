@@ -50,7 +50,7 @@
                 </ul>
             </li>
 
-            <li class="nav-item dropdown">
+            {{-- <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-shopping-cart"></i><span>Orders</span></a>
                 <ul class="dropdown-menu">
                     <li>
@@ -58,7 +58,7 @@
                     </li>
 
                 </ul>
-            </li>
+            </li> --}}
 
     </aside>
 </div>

@@ -72,7 +72,7 @@
                                             <th>Name</th>
                                             <th>Quantity</th>
                                             <th>Total Price</th>
-                                            <th>Kasir Gerobak</th>
+                                            <th>Kantor Cabang</th>
                                             <th>Action</th>
                                         </tr>
                                         <?php $no = 1; ?>

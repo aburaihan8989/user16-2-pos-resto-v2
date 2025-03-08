@@ -73,7 +73,7 @@
                             </div>
                             <div class="from-group">
                                 <div class="form-group">
-                                    <label for="kasir_id">Nama Kasir <span class="text-danger"></span></label>
+                                    <label for="kasir_id">Kantor Cabang <span class="text-danger"></span></label>
                                     <select class="select2 form-control" name="kasir_id" id="kasir_id">
                                         <option value="" selected disabled>Pilih Nama Kasir</option>
                                         @foreach(\App\Models\User::where('roles','=','user')->get() as $user)

@@ -93,7 +93,7 @@
                                     <label class="selectgroup-item">
                                         <input type="radio" name="roles" value="admin" class="selectgroup-input"
                                             @if ($user->roles == 'admin') checked @endif>
-                                        <span class="selectgroup-button">Admin</span>
+                                        <span class="selectgroup-button">Owner</span>
                                     </label>
                                     {{-- <label class="selectgroup-item">
                                         <input type="radio" name="roles" value="staff" class="selectgroup-input"
@@ -103,7 +103,7 @@
                                     <label class="selectgroup-item">
                                         <input type="radio" name="roles" value="user" class="selectgroup-input"
                                             @if ($user->roles == 'user') checked @endif>
-                                        <span class="selectgroup-button">Kasir</span>
+                                        <span class="selectgroup-button">Cabang</span>
                                     </label>
 
                                 </div>

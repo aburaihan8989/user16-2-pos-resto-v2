@@ -92,7 +92,7 @@
                                     <label class="selectgroup-item">
                                         <input type="radio" name="roles" value="admin" class="selectgroup-input"
                                             checked="">
-                                        <span class="selectgroup-button">Admin</span>
+                                        <span class="selectgroup-button">Owner</span>
                                     </label>
                                     {{-- <label class="selectgroup-item">
                                         <input type="radio" name="roles" value="staff" class="selectgroup-input">
@@ -100,7 +100,7 @@
                                     </label> --}}
                                     <label class="selectgroup-item">
                                         <input type="radio" name="roles" value="user" class="selectgroup-input">
-                                        <span class="selectgroup-button">Kasir</span>
+                                        <span class="selectgroup-button">Cabang</span>
                                     </label>
 
                                 </div>
