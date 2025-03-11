@@ -110,16 +110,16 @@
                                                 <td>
                                                     <div class="d-flex">
                                                         @if ( auth()->user()->roles == "admin" )
-                                                            {{-- <a href='{{ route('product.edit', $product->id) }}'
-                                                                class="btn btn-sm btn-info btn-icon">
-                                                                <i class="fas fa-edit"></i>
-                                                                Edit
-                                                            </a> --}}
-                                                            <a href='#'
+                                                            <a href='{{ route('stock.show', $data->stock_id) }}'
+                                                                class="btn btn-sm btn-primary btn-icon">
+                                                                <i class="fas fa-eye"></i>
+                                                                View
+                                                            </a>
+                                                            {{-- <a href='#'
                                                                 class="btn btn-sm btn-secondary btn-icon">
                                                                 <i class="fas fa-edit"></i>
-                                                                Edit
-                                                            </a>
+                                                                View
+                                                            </a> --}}
                                                         @else
                                                             <a href='#'
                                                                 class="btn btn-sm btn-secondary btn-icon">

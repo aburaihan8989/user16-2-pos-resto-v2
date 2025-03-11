@@ -51,7 +51,7 @@ class StockController extends Controller
             ->when($request->input('transaction_time'), function ($query, $transaction_time) {
                 return $query->where('transaction_time', 'like', '%' . $transaction_time . '%');
             })
-            ->select('products.name as nama','stocks.transaction_time','stocks.total_price','stocks.quantity','users.name')
+            ->select('products.name as nama','stocks.transaction_time','stocks.total_price','stocks.quantity','users.name','stocks.id as stock_id')
             ->leftJoin('products', 'stocks.product_id', '=', 'products.id')
             ->leftJoin('users', 'stocks.kasir_id', '=', 'users.id')
             ->where('type',1)
@@ -79,6 +79,22 @@ class StockController extends Controller
         $product->save();
 
         return redirect()->route('stock-out')->with('success', 'User successfully created');
+    }
+
+    public function show($id)
+    {
+        // //get order items by order id
+        // $orderItems = \App\Models\OrderItem::with('product')->where('order_id', $id)->get();
+        // $orderSum = \App\Models\OrderItem::where('order_id', $id)->select(DB::raw('SUM(quantity * total_price) as total'))->value('total');
+
+        // return view('pages.orders.view', compact('order', 'kasir', 'orderItems', 'orderSum'));
+
+        $stock = \App\Models\Stock::where('id', $id)->first();
+        $product = \App\Models\Product::where('id', $stock->product_id)->first();
+        $user = \App\Models\User::where('id', $stock->user_id)->first();
+        $kasir = \App\Models\User::where('id', $stock->kasir_id)->first();
+
+        return view('pages.stock.view', compact('stock', 'product', 'user', 'kasir'));
     }
 
     public function edit()
