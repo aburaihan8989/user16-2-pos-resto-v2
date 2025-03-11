@@ -25,7 +25,7 @@
                             <div class="col-lg-12">
                                 <div class="invoice-title">
                                     <h2>Surat Jalan</h2>
-                                    <div class="invoice-number">Date : <?php echo date("d-m-Y"); ?></div>
+                                    <div>Date : <?php echo date("d-m-Y"); ?></div>
                                 </div>
                                 <hr>
                                 <div class="row">
