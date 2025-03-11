@@ -71,7 +71,7 @@ class StockController extends Controller
     {
         $data = $request->all();
         $product = \App\Models\Product::where('id',$data['product_id'])->first();
-        $data['total_price'] = $product->cost_price * $data['quantity'];
+        $data['total_price'] = $product->price * $data['quantity'];
         $data['type'] = 1;
         $data['user_id'] = auth()->user()->id;
         \App\Models\Stock::create($data);
